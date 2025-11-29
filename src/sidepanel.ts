@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (tabs[0] && tabs[0].id) {
           chrome.scripting.executeScript({
             target: { tabId: tabs[0].id },
-            files: ['src/content-script.ts'] // Updated to new filename
+            files: ['content.js']
           }, () => {
             chrome.tabs.sendMessage(tabs[0].id!, { action: 'fill_form' }, (response) => {
               console.log(response);

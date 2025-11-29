@@ -22,8 +22,6 @@
   "web_accessible_resources": [
     {
       "resources": [
-        "content.js",
-        "background.js",
         "sidepanel.html",
         "index.html",
         "assets/*"

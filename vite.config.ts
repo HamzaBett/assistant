@@ -1,8 +1,6 @@
 import { defineConfig } from 'vite';
-import chromeExtension from 'vite-plugin-chrome-extension';
 
 export default defineConfig({
-  plugins: [chromeExtension()],
   build: {
     rollupOptions: {
       input: {
@@ -18,6 +16,7 @@ export default defineConfig({
           }
           return 'assets/[name].[hash].[ext]';
         },
+        // Manual input mapping for extension entry points
         entryFileNames: '[name].js', // Output compiled scripts directly to dist
         chunkFileNames: 'assets/[name].[hash].js',
       },
