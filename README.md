@@ -37,6 +37,14 @@ npm.cmd run build
 4. Click "Load unpacked" and select the `dist` folder.
 5. If you rebuild (`npm run dev`), click the reload button on the extension card.
 
+## Recommended dev workflow & tools
+
+- Use `npm run dev` (watch build) while developing: like this:
+```powershell
+npm.cmd run dev
+```
+- Install a Chrome extension reloader to reload your extension automatically after the files in `dist/` change. Example: "Extension Reloader" (search the Chrome Web Store). This saves you from manually pressing the reload button every time.
+
 ## Package for publishing
 
 Create a zip file ready for Chrome Web Store upload (also used for releases):

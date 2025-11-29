@@ -7,7 +7,9 @@
     "dev": "vite build --watch",
     "build": "vite build",
     "prepackage": "npm run build",
-    "package": "node ./scripts/package.js"
+    "package": "node ./scripts/package.js",
+    "check": "tsc --noEmit",
+    "dev:watch": "npm run dev"
   },
   "keywords": [],
   "author": "",
