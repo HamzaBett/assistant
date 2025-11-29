@@ -45,6 +45,11 @@ npm.cmd run dev
 ```
 - Install a Chrome extension reloader to reload your extension automatically after the files in `dist/` change. Example: "Extension Reloader" (search the Chrome Web Store). This saves you from manually pressing the reload button every time.
 
+- Run TypeScript check before committing or in CI using:
+```powershell
+npm.cmd run check
+```
+
 ## Package for publishing
 
 Create a zip file ready for Chrome Web Store upload (also used for releases):
