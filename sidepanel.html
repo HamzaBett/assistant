@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AI Assistant</title>
+  <meta charset="utf-8" />
+  <script type="module" src="/src/sidepanel.js"></script>
+</head>
+<body>
+  <h1>AI Assistant</h1>
+  <div id="app">
+    <div id="chat-container">
+      <div id="message-display"></div>
+      <div id="message-input-container">
+        <input type="text" id="message-input" placeholder="Type your message..." />
+        <button id="send-button">Send</button>
+      </div>
+    </div>
+  </div>
+
+  <h2>Actions</h2>
+  <button id="fill-form-button">Fill Form</button>
+
+  <hr>
+
+  <h2>Settings</h2>
+  <form id="settings-form">
+    <div>
+      <label for="qwen-api-key">Qwen API Key:</label>
+      <input type="password" id="qwen-api-key" name="qwen-api-key" />
+    </div>
+    <div>
+      <label for="gemini-api-key">Gemini API Key:</label>
+      <input type="password" id="gemini-api-key" name="gemini-api-key" />
+    </div>
+    <button type="submit">Save Keys</button>
+  </form>
+
+  <hr>
+
+  <h2>File Management</h2>
+  <input type="file" id="file-input" />
+  <button id="save-file-button">Save File</button>
+  <ul id="file-list"></ul>
+</body>
+</html>

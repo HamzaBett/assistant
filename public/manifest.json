@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "AI Assistant",
+  "version": "1.0.0",
+  "description": "An AI assistant that can perform autonomous web tasks.",
+  "permissions": [
+    "storage",
+    "sidePanel",
+    "activeTab",
+    "scripting"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "side_panel": {
+    "default_path": "sidepanel.html"
+  },
+  "action": {
+    "default_title": "Click to open AI Assistant"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "content-script.js",
+        "background.js",
+        "sidepanel.html",
+        "sidepanel.js",
+        "index.html"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ]
+}
