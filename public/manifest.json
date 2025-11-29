@@ -22,11 +22,11 @@
   "web_accessible_resources": [
     {
       "resources": [
-        "content-script.js",
+        "content.js",
         "background.js",
         "sidepanel.html",
-        "sidepanel.js",
-        "index.html"
+        "index.html",
+        "assets/*"
       ],
       "matches": [
         "<all_urls>"
