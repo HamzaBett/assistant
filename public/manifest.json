@@ -1,34 +1,37 @@
 {
   "manifest_version": 3,
-  "name": "AI Assistant",
-  "version": "1.0.0",
-  "description": "An AI assistant that can perform autonomous web tasks.",
+  "name": "My Chrome Extension",
+  "version": "1.0",
+  "description": "A simple Chrome extension example.",
   "permissions": [
     "storage",
-    "sidePanel",
     "activeTab",
-    "scripting"
+    "<all_urls>"
   ],
   "background": {
-    "service_worker": "background.js",
-    "type": "module"
-  },
-  "side_panel": {
-    "default_path": "sidepanel.html"
+    "service_worker": "background.js"
   },
   "action": {
-    "default_title": "Click to open AI Assistant"
-  },
-  "web_accessible_resources": [
-    {
-      "resources": [
-        "sidepanel.html",
-        "index.html",
-        "assets/*"
-      ],
-      "matches": [
-        "<all_urls>"
-      ]
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "images/icon16.png",
+      "48": "images/icon48.png",
+      "128": "images/icon128.png"
     }
-  ]
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  },
+  "icons": {
+    "16": "images/icon16.png",
+    "48": "images/icon48.png",
+    "128": "images/icon128.png"
+  }
 }
